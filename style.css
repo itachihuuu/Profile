@@ -1,0 +1,159 @@
+/* Custom Interaction Overrides */
+#webgl-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#mouse-glow {
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.05) 0%, rgba(0,0,0,0) 70%);
+}
+
+#custom-cursor {
+    box-shadow: 0 0 12px rgba(34, 211, 238, 0.8);
+}
+
+/* Glassmorphism Blur Layers */
+.glass-card {
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.glass-card:hover {
+    border-color: rgba(34, 211, 238, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0f1d;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(34, 211, 238, 0.1);
+    border-radius: 9px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #22d3ee;
+}
+
+/* Project Card 3D Setup */
+.project-card {
+    transform-style: preserve-3d;
+    transition: border 0.3s ease;
+}
+
+/* Wave Ripple Element */
+.ripple-fx {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-out 0.5s linear;
+    background: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+}
+@keyframes ripple-out {
+    to { transform: scale(4); opacity: 0; }
+}
+
+/* Filter States */
+.filter-btn.active {
+    background: rgba(34, 211, 238, 0.1);
+    border-color: #22d3ee;
+    color: #f8fafc;
+}
+
+/* Modal Active State Transitions */
+#resume-modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+#resume-modal.active .modal-inner {
+    transform: translateY(0);
+}
+/* Main Portfolio Font */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Name */
+#hero-name,
+#resume-name {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+}
+
+/* Rotating Text */
+#rotating-text-span {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 2px;
+    
+}
+
+/* Section Titles */
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Cards & Content */
+.glass-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+}
+
+.glass-card p {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Buttons */
+.btn-neon,
+button,
+a {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Statistics Numbers */
+.stat-number {
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 15px rgba(34,211,238,.5);
+}
+
+#hero-name {
+    background: linear-gradient(
+        90deg,
+        #22d3ee,
+        #a855f7,
+        #ffffff,
+        #22d3ee
+    );
+    background-size: 300% auto;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: glowText 6s linear infinite;
+    
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    
+}
+
+
+@keyframes glowText {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 300% center;
+    }
+}
+
