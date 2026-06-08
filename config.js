@@ -86,7 +86,7 @@ const PortfolioConfig = {
         instagram: "https://instagram.com/itachihudost",
         github: "https://github.com/itachihuuu",
         linkedin: "https://linkedin.com/in/yourusername",
-        whatsapp: "https://wa.me/8252904776",
+        whatsapp: "https://wa.me/9262281487",
         gmail: "mr.xxxshivam01@gmail.com"
     }
 };
