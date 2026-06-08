@@ -57,7 +57,7 @@ const PortfolioConfig = {
         {
             title: "Birthday wish surprise",
             category: "surprise",
-            desc: "A full customized wish surprise for your partner and friend.",
+            desc: "A full customized wish surprise for your partner and friend. <br><br> To unlock and access the inner content of this website use password 'PANDA'. ",
             tech: ["React", "Node.js", "CSS Modules"],
             image: "bdypic.png",
             demoUrl: "https://panda-birthday-wish.netlify.app",
