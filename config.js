@@ -82,11 +82,11 @@ const PortfolioConfig = {
     
     // 🌟 COMPLETE COMMUNICATION PORTAL LINKS MATRIX
     socials: {
-        telegram: "https://t.me/yourusername",
+        telegram: "https://t.me/itachihud0st",
         instagram: "https://instagram.com/itachihudost",
         github: "https://github.com/itachihuuu",
         linkedin: "https://linkedin.com/in/yourusername",
-        whatsapp: "https://wa.me/9262281487",
+        whatsapp: "https://wa.me/",
         gmail: "mr.xxxshivam01@gmail.com"
     }
 };
