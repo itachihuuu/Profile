@@ -226,7 +226,7 @@ class PortfolioEngine {
                         <div class="flex flex-wrap gap-2 mt-4">${p.tech.map(t => `<span class="text-[9px] font-bold bg-slate-950 px-2 py-1 rounded text-cyan-400 uppercase tracking-wider">${t}</span>`).join('')}</div>
                     </div>
                     <div class="flex gap-4 pt-2 text-[11px] font-bold tracking-widest">
-                        <a href="${p.demoUrl}" class="text-cyan-400 hover:underline">LIVE DEPLOY ↗</a>
+                        <a href="${p.demoUrl}" class="text-cyan-400 hover:underline">WEBSITE ↗</a>
                         <a href="${p.sourceUrl}"
    class="source-link text-slate-300 hover:text-white hover:underline"
    data-coming-soon="${p.comingSoon || false}">
