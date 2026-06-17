@@ -26,7 +26,7 @@ class PortfolioEngine {
         document.getElementById('about-p1').innerText = p.aboutSummary;
         document.getElementById('about-p2').innerText = `Primary Mandate: ${p.careerGoals}`;
         document.getElementById('about-vision-text').innerText = 'Great design attracts attention, but great user experience builds trust. I believe every website should be visually appealing, responsive, fast, and intuitive. My goal is to create interfaces that not only look outstanding but also provide a seamless experience for every user.';
-        document.getElementById('btn-download-resume').href = p.resumeUrl;
+        //
         
         // Build Metric Counter Nodes
         const statsWrap = document.getElementById('stats-container');
@@ -226,7 +226,7 @@ class PortfolioEngine {
                         <div class="flex flex-wrap gap-2 mt-4">${p.tech.map(t => `<span class="text-[9px] font-bold bg-slate-950 px-2 py-1 rounded text-cyan-400 uppercase tracking-wider">${t}</span>`).join('')}</div>
                     </div>
                     <div class="flex gap-4 pt-2 text-[11px] font-bold tracking-widest">
-                        <a href="${p.demoUrl}" class="text-cyan-400 hover:underline">WEBSITE ↗</a>
+                        <a href="${p.demoUrl}" class="text-cyan-400 hover:underline">WEBSITE↗</a>
                         <a href="${p.sourceUrl}"
    class="source-link text-slate-300 hover:text-white hover:underline"
    data-coming-soon="${p.comingSoon || false}">
@@ -271,13 +271,13 @@ if (sourceBtn) {
         const modal = document.getElementById('resume-modal');
         const p = this.config.profile;
 
-        document.getElementById('btn-view-resume').addEventListener('click', () => {
-            document.getElementById('resume-img').src = p.profileImage;
-            document.getElementById('resume-name').innerText = p.name.toUpperCase();
-            document.getElementById('resume-title').innerText = p.title.toUpperCase();
-            document.getElementById('resume-summary').innerText =p.resumeSummary;
-            modal.classList.add('active');
-        });
+      //  document.getElementById('btn-view-resume').addEventListener('click', () => {
+   //         document.getElementById('resume-img').src = p.profileImage;
+  //          document.getElementById('resume-name').innerText = p.name.toUpperCase();
+   //         document.getElementById('resume-title').innerText = p.title.toUpperCase();
+   //         document.getElementById('resume-summary').innerText =p.resumeSummary;
+    //        modal.classList.add('active');
+  //      });
 
         document.getElementById('modal-close-btn').addEventListener('click', () => modal.classList.remove('active'));
         modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
@@ -343,27 +343,14 @@ if (sourceBtn) {
     }
 }
 
-
-
-// Loader removal
 window.addEventListener("load", () => {
     const loader = document.getElementById("loading-screen");
 
-    if (loader) {
-        loader.style.opacity = "0";
+    loader.style.opacity = "0";
 
-        setTimeout(() => {
-            loader.remove();
-        }, 500);
-    }
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 500);
 });
 
-// Fallback
-setTimeout(() => {
-    const loader = document.getElementById("loading-screen");
-
-    if (loader) {
-        loader.remove();
-    }
-}, 5000);
 window.addEventListener('DOMContentLoaded', () => { new PortfolioEngine(); });
