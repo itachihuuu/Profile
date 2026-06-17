@@ -343,4 +343,27 @@ if (sourceBtn) {
     }
 }
 
+
+
+// Loader removal
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loading-screen");
+
+    if (loader) {
+        loader.style.opacity = "0";
+
+        setTimeout(() => {
+            loader.remove();
+        }, 500);
+    }
+});
+
+// Fallback
+setTimeout(() => {
+    const loader = document.getElementById("loading-screen");
+
+    if (loader) {
+        loader.remove();
+    }
+}, 5000);
 window.addEventListener('DOMContentLoaded', () => { new PortfolioEngine(); });
